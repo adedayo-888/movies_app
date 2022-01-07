@@ -1,0 +1,37 @@
+/* font-family: 'Lobster', cursive;
+font-family: 'Open Sans', sans-serif; */
+* {
+  scroll-behavior: smooth;
+}
+
+.app {
+  min-height: 100vh;
+  background-color: #568aeb;
+  color: white;
+  padding-top: 80px;
+  padding-bottom: 70px;
+}
+
+@media (max-width: 700px) {
+  .app {
+    padding-top: 70px;
+  }
+}
+
+.pageTitle {
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  /* font-family: 'Open Sans', sans-serif; */
+  font-size: 2.5rem;
+  font-family: 'Lobster', cursive;
+  padding: 4px;
+  border-radius: 50px;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .pageTitle {
+    font-size: 1.6rem;
+  }
+}
