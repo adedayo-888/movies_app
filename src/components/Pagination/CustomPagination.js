@@ -5,10 +5,10 @@ import { createTheme, ThemeProvider } from '@mui/material';
 const darkTheme = createTheme({
   palette: {
     type: 'dark',
+    primary: {
+      main: '#fff',
+    },
   },
-  // '& .MuiTouchRipple-root': {
-  //   color: 'white',
-  // },
 });
 
 export default function CustomPagination({ setPage, numOfPages = 10 }) {

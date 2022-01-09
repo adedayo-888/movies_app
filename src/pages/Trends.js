@@ -20,6 +20,7 @@ const Trends = () => {
   useEffect(() => {
     window.scroll(0, 0);
     fetchTrending();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page]);
 
   return (
@@ -54,4 +55,3 @@ const Trends = () => {
 };
 
 export default Trends;
-//yarn start
