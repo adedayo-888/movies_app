@@ -1,9 +1,9 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import Genres from '../../components/Genres/Genres';
-import CustomPagination from '../../components/Pagination/CustomPagination';
-import SingleContent from '../../components/SingleContent/SingleContent';
-import useGenre from '../../hooks/useGenre';
+import Genres from '../components/Genres/Genres';
+import CustomPagination from '../components/Pagination/CustomPagination';
+import SingleContent from '../components/SingleContent/SingleContent';
+import useGenre from '../hooks/useGenre';
 import { Container } from '@mui/material';
 
 const Series = () => {
@@ -40,7 +40,13 @@ const Series = () => {
         setGenres={setGenres}
         setPage={setPage}
       />
-      <Container className='trending'>
+      <Container
+        sx={{
+          display: 'flex',
+          flexWrap: 'wrap',
+          justifyContent: 'space-around',
+        }}
+        className='trending'>
         {content &&
           content.map((c) => (
             <SingleContent

@@ -49,9 +49,8 @@ const Movies = () => {
           flexWrap: 'wrap',
           justifyContent: 'space-around',
         }}>
-        
         {content &&
-          
+          content.map((c) => (
             <SingleContent
               key={c.id}
               id={c.id}
