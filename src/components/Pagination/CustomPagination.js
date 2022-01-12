@@ -1,15 +1,8 @@
 import React from 'react';
 import Pagination from '@mui/material/Pagination';
-import { createTheme, ThemeProvider } from '@mui/material';
+// import { createTheme, ThemeProvider } from '@mui/material';
 
-const darkTheme = createTheme({
-  palette: {
-    type: 'dark',
-    primary: {
-      main: '#fff',
-    },
-  },
-});
+// const darkTheme = createTheme({ type: 'dark' });
 
 export default function CustomPagination({ setPage, numOfPages = 10 }) {
   const handlePageChange = (page) => {
@@ -26,18 +19,17 @@ export default function CustomPagination({ setPage, numOfPages = 10 }) {
         marginTop: 10,
         color: 'white',
       }}>
-      <ThemeProvider theme={darkTheme}>
-        <Pagination
-          variant='outlined'
-          shape='rounded'
-          size='large'
-          onChange={(e) => handlePageChange(e.target.textContent)}
-          count={numOfPages}
-          color='secondary'
-          hideNextButton
-          hidePrevButton
-        />
-      </ThemeProvider>
+      {/* <ThemeProvider theme={darkTheme}></ThemeProvider> */}
+      <Pagination
+        variant='outlined'
+        shape='rounded'
+        size='large'
+        onChange={(e) => handlePageChange(e.target.textContent)}
+        count={numOfPages}
+        color='secondary'
+        hideNextButton
+        hidePrevButton
+      />
     </div>
   );
 }
