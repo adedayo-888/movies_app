@@ -29,6 +29,8 @@ const Genres = ({
       `https://api.themoviedb.org/3/genre/${type}/list?api_key=${process.env.REACT_APP_MOVIE_KEY}&language=en-US`
     );
     setGenres(data.genres);
+
+    console.log(genres);
   };
 
   useEffect(() => {
@@ -41,7 +43,7 @@ const Genres = ({
   }, []);
 
   return (
-    <div style={{ padding: '10px 0' }}>
+    <div>
       {selectedGenres.map((genre) => (
         <Chip
           style={{ margin: 2 }}
